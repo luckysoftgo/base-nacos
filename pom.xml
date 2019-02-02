@@ -1,21 +1,31 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    
-    <modelVersion>4.0.0</modelVersion>
-    <groupId>com.application.base</groupId>
-	<modules>
-
-	</modules>
+	<name>base-nacos</name>
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.application.base</groupId>
 	<artifactId>base-nacos</artifactId>
-    <!-- 模块设置. -->
-    <version>1.0.0-RELEASE</version>
-    <name>base-nacos</name>
-    
+	<version>1.0.0-RELEASE</version>
+
+	<!-- 模块设置. -->
+	<modules>
+		<!--nacos-server应用-->
+		<module>base-nacos-server</module>
+		<!--nacos-client应用-->
+		<module>base-nacos-client</module>
+	</modules>
     <!-- pom文件定义 -->
     <packaging>pom</packaging>
 
+	<!-- 所依赖的springboot版本. -->
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.0.5.RELEASE</version>
+		<relativePath />
+	</parent>
+
     <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<spring.version>5.0.9.RELEASE</spring.version>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <downloadSources>true</downloadSources>
     </properties>
 
