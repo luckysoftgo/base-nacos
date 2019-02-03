@@ -11,6 +11,8 @@
 		<module>base-nacos-server</module>
 		<!--nacos-client应用-->
 		<module>base-nacos-client</module>
+		<!--nacos-config nacos 的web配置 -->
+		<module>base-nacos-config</module>
 	</modules>
     <!-- pom文件定义 -->
     <packaging>pom</packaging>

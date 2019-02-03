@@ -16,8 +16,6 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("server")
 public class NacosServerController {
 	
-	
-	
 	/**
 	 * 访问地址:
 	 *      http://127.0.0.1:8001/base-nacos-server/server/sayHelloServer?name=bruce
@@ -29,24 +27,5 @@ public class NacosServerController {
 		log.info("Hello :" + name);
 		return "Hello :" + name;
 	}
-	
-	/**************************************************************************************** 获取配置中心的配置信息,在 nacos 的配置中心 web 页面设置 *********************************************************************************/
-	
-	@Value("${default-key:}")
-	private String defaultKey;
-	@Value("${default-value:}")
-	private String defaultValue;
-	
-	/**
-	 * 访问地址:
-	 *      http://127.0.0.1:8001/base-nacos-server/server/getSetProps
-	 * @return
-	 */
-	@GetMapping("/getSetProps")
-	public String getProps() {
-		log.info("the  default-key=" + defaultKey+",default-value="+defaultValue);
-		return "the  default-key=" + defaultKey+",default-value="+defaultValue;
-	}
-	
 	
 }
