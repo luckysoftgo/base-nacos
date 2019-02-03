@@ -2,6 +2,7 @@ package com.application.base.config.nacos;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -10,7 +11,8 @@ import org.springframework.web.bind.annotation.RestController;
  * @desc: 测试 nacos 配置的管理实现.
  */
 @Slf4j
-@RestController
+@RefreshScope
+@RestController("config")
 public class NacosConfigControllr {
 	
 	@Value("${default-key:}")
@@ -20,7 +22,7 @@ public class NacosConfigControllr {
 	
 	/**
 	 * 访问地址:
-	 *      http://127.0.0.1:8001/base-nacos-server/server/getSetProps
+	 *      http://127.0.0.1:8001/base-nacos-config/config/getSetProps
 	 * @return
 	 */
 	@GetMapping("/getSetProps")
