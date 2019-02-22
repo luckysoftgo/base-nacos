@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 @Slf4j
 @RefreshScope
 @RestController("config")
-public class NacosConfigControllr {
+public class NacosConfigController {
 	
 	@Value("${default-key:}")
 	private String defaultKey;
